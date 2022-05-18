@@ -31,6 +31,7 @@ export const Wrapper = styled.div`
             p {
                 font-size: 21px;
                 color: white;
+                margin: 18px 0 ;
             }
 
             span {
