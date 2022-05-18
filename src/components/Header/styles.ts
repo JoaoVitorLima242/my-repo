@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
         font-family: 'Lobster Two', cursive;
         color: white;
         text-shadow: 4px 2px 0 #6272a4;
+        font-weight: 900;
     }
 
     .nav-links {

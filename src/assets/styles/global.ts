@@ -25,8 +25,13 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  p, small {
+    font-family: 'Inter', sans-serif;
+  }
+
   .wd-cont {
     max-width: 1280px;
+    margin: 0 auto;
   }
 
 `;

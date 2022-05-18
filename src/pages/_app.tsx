@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { GlobalStyle } from '../assets/styles/global'
 import Header from '../components/Header'
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App({ Component, pageProps }: AppProps) {
   return (

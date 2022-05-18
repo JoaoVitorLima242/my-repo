@@ -14,6 +14,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
             h1 {
               font-family: 'Lobster Two', cursive;
+              font-weight: 800;
               color: #50fa7b;
               font-size: 80px;
               max-width: 600px;
