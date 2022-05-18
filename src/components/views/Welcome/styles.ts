@@ -22,7 +22,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             }
 
             button {
-                background-color: #bd93f9;
+                background-color: #bd93f999;
                 border: none;
                 padding: 20px 40px;
                 border-radius: 16px;
@@ -32,6 +32,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
                 color: white;
                 font-weight: 700;
                 font-size: 24px;
+                cursor: pointer;
+                
+                :hover {
+                    transition: all ease-out 0.45s;
+                    background-color: #bd93f9;  
+                }
             }
     }
 `
