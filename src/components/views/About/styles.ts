@@ -20,9 +20,21 @@ export const Wrapper = styled.div`
         .info {
             display: flex;
 
+            h5 {
+                font-family: 'Lobster Two',cursive;
+                font-weight: 700;
+                text-shadow: 4px 2px 0  #f8f8f220;
+                color: #ff79c6;
+                font-size: 30px;
+            }
+
             p {
-                font-size: 24px;
+                font-size: 21px;
                 color: white;
+            }
+
+            span {
+                color: #ff79c6;
             }
 
             .line {
@@ -31,6 +43,19 @@ export const Wrapper = styled.div`
                 background-color: #ff79c6;
                 height: auto;
                 margin: 0 20px;
+                position: relative;
+                
+                .ball {
+                    position: absolute;
+                    top: 8px;
+                    right: -10px;
+                    width: 16px;
+                    height: 16px;
+                    border: solid 4px #994876;
+                    box-shadow: 0px 0px 19px 0px #994876;
+                    border-radius: 50%;
+                    background-color: #ff79c6;
+                }
             }
         }
 
@@ -51,7 +76,7 @@ export const CustomTitle = styled.div`
     }
     p {
       color: #f8f8f2;
-      font-size: 24px;
+      font-size: 22px;
       font-family: 'Montserrat', sans-serif;
       opacity: 0.8;
     }

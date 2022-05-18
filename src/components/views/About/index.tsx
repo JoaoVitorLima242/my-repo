@@ -1,5 +1,6 @@
 import * as S from "./styles"
 import Image from "next/image"
+import { FaHouseUser } from "react-icons/fa"
 
 const About = () => {
     return (
@@ -23,7 +24,9 @@ const About = () => {
                         <div className="ball"></div>
                     </div>
                     <div className="text">
-                        <div className="d-flex">
+                        <div className="d-flex flex-column">
+                            <h5>João Vitor Brietzke de Lima</h5>
+                            <span><FaHouseUser/> Porto Alegre - RS</span>
                         </div>
                         <p>Tenho paixão em enfrentar desafios e com desenvolvimento de software consigo enfrenta-los. Ando surfando nesse mar de códigos e cada vez mais me apaixonando em pegar um projeto que é uma ideia e tornando-o em realidade.</p>
                         <p>Venho desenvolvendo com front-end com linguagem React.Js para estruturação, estilos a base de CSS puro, boostrap e frameworks e claro, o clássico HTML. Utilizo também, node.js para estruturação de api e conexão banco de dados(MongoDB). Sonho em me tornar um desenvolvedor fullstack, deste modo estou me esforçando e estudando para cada vez chegar perto desse objetivo.</p>
