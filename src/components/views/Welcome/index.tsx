@@ -5,8 +5,8 @@ const Welcome = () => {
     return(
         <S.Wrapper>
             <div className="content">               
-                <h1>Full-Stack Web Developer</h1>
-                <button>Tell me more</button>
+                <h1>Desenvolvedor Web Full Stack</h1>
+                <button>Informações</button>
             </div>
         </S.Wrapper>
     )

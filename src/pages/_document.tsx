@@ -23,7 +23,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head/>
+        <Head lang='pt-BR'/>
         <body>
           <Main />
           <NextScript />

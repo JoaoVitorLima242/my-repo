@@ -4,8 +4,8 @@ const About = () => {
     return (
         <S.Wrapper>
             <S.CustomTitle>
-                <h1>About Me</h1>
-                <p>Hi! Nice to meet you ...</p>
+                <h1>Sobre mim</h1>
+                <p>Oi! Prazer em te conhecer ...</p>
             </S.CustomTitle>
             <div>
 
