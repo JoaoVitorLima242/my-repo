@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     .content {
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
         justify-content: space-between;
         background-color: #282a36;
         padding: 20px 40px;
@@ -58,6 +59,48 @@ export const Wrapper = styled.div`
                     background-color: #ff79c6;
                 }
             }
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 35px 40px 5px;
+            margin-left: auto;
+            
+            .icon {
+                width: 46px;
+                height: 46px;
+                border: solid 4px #994876;
+                box-shadow: 0px 0px 19px 0px #994876;
+                border-radius: 50%;
+                background-color: #ff79c6;
+                display: flex;
+                align-items: center;
+
+                
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    color: white;
+                    margin: 0 auto;
+                }
+
+            }
+
+            h6, span {
+                margin-left: 10px;
+                margin-right: 60px;
+            }
+
+            h6 {
+                margin-bottom: 0 !important;
+                color: white;
+            }
+            
+            span {
+                color: #ff79c6;
+            } 
         }
 
     }
