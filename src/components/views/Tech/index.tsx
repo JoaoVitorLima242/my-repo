@@ -21,7 +21,7 @@ const Tech = () => {
     const reponsive = {
         desktop: {
             breakpoint: { max: 4000, min: 0 },
-            items: 5
+            items: 6
         }
     }
    return (
