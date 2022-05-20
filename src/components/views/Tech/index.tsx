@@ -43,48 +43,48 @@ const Tech = () => {
                         <Image 
                             src={"/img/css.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/git.png"} 
                             alt="git"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/html.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/js.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/react.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/styled-components.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                             style={{background: 'white'}}
                         />
                     </div>
@@ -92,24 +92,24 @@ const Tech = () => {
                         <Image 
                             src={"/img/ts.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/mongo.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     <div className="item">
                         <Image 
                             src={"/img/node.png"} 
                             alt="css"
-                            width={120}
-                            height={120}
+                            width={130}
+                            height={130}
                         />
                     </div>
                     </Carousel>
