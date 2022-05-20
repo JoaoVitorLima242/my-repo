@@ -38,22 +38,3 @@ export const Wrapper = styled.div`
             }
         }
 `   
-
-export const CustomTitle = styled.div`
-    text-align: center;
-
-    h1 {
-      color: #50fa7b;
-      font-family: 'Lobster Two',cursive;
-      font-size: 50px;
-      padding-top: 40px;
-      text-shadow: 4px 2px 0 #282a36;
-      font-weight: 700;
-    }
-    p {
-      color: #f8f8f2;
-      font-size: 22px;
-      font-family: 'Montserrat', sans-serif;
-      opacity: 0.8;
-    }
-`
