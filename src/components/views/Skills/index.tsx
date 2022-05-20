@@ -39,7 +39,7 @@ const Skills = () => {
         },
         {
             h3: 'Otimização',
-            p: 'Utilizações de tecnologias atuais para ter uma aplicação mais rápida com um melhor SEO.',
+            p: 'Utilização de tecnologias atualizadas para ter uma aplicação com performance e otimizados para o Google.',
             icon: <FaBolt />
         },
         {
