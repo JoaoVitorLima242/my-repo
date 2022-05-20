@@ -49,13 +49,12 @@ const Skills = () => {
         },
 
     ]
-
    return (
         <S.Wrapper>
             <div className="wd-cont">
                 <S.CustomTitle>
                     <h1>Habilidades</h1>
-                    <p>Algumas tecnologias que eu tenho conhecimento!</p>
+                    <p>Essas são algumas habilidades das minhas habilidades!</p>
                 </S.CustomTitle>
                 <div className="expertises">
                     {expertises.map(({h3, p, icon}) => (
@@ -69,7 +68,6 @@ const Skills = () => {
                         
                     ))}
                 </div>
-
             </div>
         </S.Wrapper>
     );

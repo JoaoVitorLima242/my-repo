@@ -1,0 +1,59 @@
+import styled from "styled-components";
+
+export const Wrapper = styled.div`
+    background-color: #383a59;
+    padding: 20px;
+    
+        .carousel {
+            margin: 0 auto;
+
+            .react-multi-carousel-track {
+                height: 180px;
+            }
+
+            .react-multi-carousel-dot button {
+                border: none;
+                border-radius: 8px;
+                height: 6px;
+                width: 39px;
+                background-color: #9BFBB370;
+            }
+            .react-multi-carousel-dot--active button {
+                background-color: #50FA7B;
+                box-shadow: 0px 0px 4px 0px #50fa7b;
+            }
+            
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    background-color: #282a36;
+                    border-radius: 24px;
+                    margin: 0 auto !important;
+                    border: 4px solid #282a36;
+                }
+            }
+        }
+`   
+
+export const CustomTitle = styled.div`
+    text-align: center;
+
+    h1 {
+      color: #50fa7b;
+      font-family: 'Lobster Two',cursive;
+      font-size: 50px;
+      padding-top: 40px;
+      text-shadow: 4px 2px 0 #282a36;
+      font-weight: 700;
+    }
+    p {
+      color: #f8f8f2;
+      font-size: 22px;
+      font-family: 'Montserrat', sans-serif;
+      opacity: 0.8;
+    }
+`

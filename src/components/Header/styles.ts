@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     justify-content: space-around;
     position: sticky;
     top: 0;
+    z-index: 9999;
 
     h1 {
         font-family: 'Lobster Two', cursive;
