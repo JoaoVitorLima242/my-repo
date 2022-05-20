@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     background-color: #44475a;
-    padding: 20px;
+    padding: 40px 20px;
+    
     .content {
         display: flex;
         align-items: flex-start;
