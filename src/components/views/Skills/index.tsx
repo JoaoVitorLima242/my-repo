@@ -50,7 +50,7 @@ const Skills = () => {
 
     ]
    return (
-        <S.Wrapper>
+        <S.Wrapper id="habilidade">
             <div className="wd-cont">
                 <S.CustomTitle>
                     <h1>Habilidades</h1>

@@ -51,7 +51,7 @@ const Portifolio = () => {
     ]
 
     return (
-        <S.Wrapper>
+        <S.Wrapper id="portifolio">
             <div className="wd-cont">
                 <S.CustomTitle>
                     <h1>Portifólio</h1>

@@ -23,7 +23,7 @@ const cards : Card[] = [
 
 const About = () => {
     return (
-        <S.Wrapper>
+        <S.Wrapper id="sobre">
             <div className="wd-cont">
                 <S.CustomTitle>
                     <h1>Sobre mim</h1>
