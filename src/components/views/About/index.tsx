@@ -1,6 +1,7 @@
-import * as S from "./styles"
 import Image from "next/image"
-import { FaHouseUser, FaBug, FaUserAstronaut } from "react-icons/fa"
+
+import * as S from "./styles"
+import { FaHouseUser, FaBug, FaUserAstronaut, FaCogs } from "react-icons/fa"
 
 type Card = {
     h6: string;
@@ -10,13 +11,18 @@ type Card = {
 
 const cards : Card[] = [
     {
-        h6: "10+ Projetos",
-        span: "Entregues",
+        h6: "2 Years with",
+        span: "JavaScript",
         icon: <FaBug/>
     },
     {
+        h6: "15+ Projects",
+        span: "Delivered",
+        icon: <FaCogs/>
+    },
+    {
         h6: "Freelancer",
-        span: "Disponivel",
+        span: "Available",
         icon: <FaUserAstronaut/>
     },
 ]
@@ -48,9 +54,9 @@ const About = () => {
                                 <h5>João Vitor Brietzke de Lima</h5>
                                 <span><FaHouseUser/> Porto Alegre - RS</span>
                             </div>
-                            <p>Olá, tudo bem? Sou o João Vitor, um desenvolvedor web de 20 anos que está admirado com esse mundo de códigos! Comecei a trabalhar com desenvolvimento por ser uma pessoa que gosta de desafios e de estar sempre aprendendo cada vez mais coisas novas!</p>
-                            <p>Com a programação, também consigo pegar projetos que eram apenas ideias e transforma-los em realidade.</p>
-                            <p>Me considero uma pessoa muito esforçada e criativa. Espero poder te ajudar a criar suas ideias em realidade.</p>
+                            <p>Hello, I’m João Vitor and I’m a software engineer. I chose this profession because is a really great way to develop virtual ideas and bring them to reality.</p>
+                            <p>I have been surfing in this ocean of knowledge and I&lsquo;m growing increasingly passionate about facing the new challenges found in this field.</p>
+                            <p>I consider myself a hardworking and creative person. I have been careful to stay in touch with the latest technologies, using only the latest cutting-edge material, within my work.</p>
                         </div>
                         </div>
                     </div>

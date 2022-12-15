@@ -1,20 +1,7 @@
-import * as S from "./styles"
-import { 
-    FaTv,
-    FaCogs,
-    FaDatabase,
-    FaPlug,
-    FaBolt,
-    FaBuilding
-} from "react-icons/fa"
 import Carousel from "react-multi-carousel"
 import Image from "next/image"
 
-type Expertise = {
-    h3: string;
-    p: string;
-    icon: JSX.Element;
-}
+import * as S from "./styles"
 
 const Tech = () => {
 
@@ -27,10 +14,6 @@ const Tech = () => {
    return (
         <S.Wrapper>
             <div className="wd-cont">
-                {/* <S.CustomTitle>
-                    <h1>Tecnologias</h1>
-                    <p>Algumas tecnologias que eu tenho conhecimento!</p>
-                </S.CustomTitle> */}
                 <Carousel
                     responsive={reponsive}
                     ssr={true}
