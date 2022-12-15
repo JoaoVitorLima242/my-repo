@@ -2,15 +2,15 @@ import * as S from "./styles"
 import { 
     FaTv,
     FaCogs,
-    FaDatabase,
+    FaMobileAlt,
     FaPlug,
     FaBolt,
     FaBuilding
 } from "react-icons/fa"
 
 type Expertise = {
-    h3: string;
-    p: string;
+    title: string;
+    description: string;
     icon: JSX.Element;
 }
 
@@ -18,33 +18,33 @@ const Skills = () => {
 
     const expertises: Expertise[] = [
         {
-            h3: 'Desenvolvimento Web responsivo',
-            p: 'Aplicações responsivas tantos para mobile quanto desktop!',
+            title: 'Responsive web development',
+            description: 'Responsive applications for both mobile and desktop!',
             icon: <FaTv />
         },
         {
-            h3: 'Desenvolvimento de API',
-            p: 'APIs REST que se adaptam às suas necessidades e seguem as melhores práticas em desempenho e segurança',
+            title: 'API development',
+            description: 'REST APIs that adapt to your needs and follow best practices in performance and security.',
             icon: <FaCogs />
         },
         {
-            h3: 'Desing de Banco de Dados',
-            p: 'Desing de banco de dados para desenvolvimentoeficaz, sempre visando desempenho, escala e estabilidade.',
-            icon: <FaDatabase />
+            title: 'Mobile development',
+            description: 'Hybrid mobile apps that will work on both iOS and Android, saving you time and money in development.',
+            icon: <FaMobileAlt />
         },
         {
-            h3: 'Integração de APIs de terceiros',
-            p: 'Integração com qualquer API de terceiros de sua escolha. Estenda a funcionalidade de seus aplicativos com o mínimo de esforço.',
+            title: 'Third-party API integration',
+            description: 'Integration with any third-party API of your choice. Extend the functionality of your apps with minimal effort.',
             icon: <FaPlug />
         },
         {
-            h3: 'Otimização',
-            p: 'Utilização de tecnologias atualizadas para ter uma aplicação com performance e otimizados para o Google.',
+            title: 'Optimization',
+            description: 'Use of updated technologies to have an application with performance and optimized for Google.',
             icon: <FaBolt />
         },
         {
-            h3: 'Arquitetura de Sistemas',
-            p: 'Desenvolver nem sempre é tudo, mas a arquitetura de um sistema diz muito sobre ele. Construímos arquiteturas de sistemas escaláveis e de fácil adaptação/manutenção.',
+            title: 'Systems Architecture',
+            description: 'The architecture of a system says a lot about it. We build scalable system architectures that are easy to adapt/maintain.',
             icon: <FaBuilding />
         },
 
@@ -53,17 +53,17 @@ const Skills = () => {
         <S.Wrapper id="habilidade">
             <div className="wd-cont">
                 <S.CustomTitle>
-                    <h1>Habilidades</h1>
-                    <p>Essas são algumas habilidades das minhas habilidades!</p>
+                    <h1>Skills</h1>
+                    <p>These are some skills of my skills!</p>
                 </S.CustomTitle>
                 <div className="expertises">
-                    {expertises.map(({h3, p, icon}) => (
-                        <div className="expertise" key={h3}>
+                    {expertises.map(({title, description, icon}) => (
+                        <div className="expertise" key={title}>
                             <div className="icon">
                                 {icon}
                             </div>
-                            <h3>{h3}</h3>
-                            <p>{p}</p>
+                            <h3>{title}</h3>
+                            <p>{description}</p>
                         </div>
                         
                     ))}

@@ -32,14 +32,14 @@ const About = () => {
         <S.Wrapper id="sobre">
             <div className="wd-cont">
                 <S.CustomTitle>
-                    <h1>Sobre mim</h1>
-                    <p>Oi! Prazer em te conhecer ...</p>
+                    <h1>About Me</h1>
+                    <p>Hi! Nice to meet ...</p>
                 </S.CustomTitle>
                 <div className="content">
                     <div className="d-flex">
                         <div className="profile-img">
                             <Image 
-                                src='/img/1616614690713.jpeg'
+                                src='/img/my_photo.jpeg'
                                 alt="Uma foto minha sorrindo" 
                                 width={400}
                                 height={400}
@@ -52,7 +52,7 @@ const About = () => {
                         <div className="text">
                             <div className="d-flex flex-column">
                                 <h5>João Vitor Brietzke de Lima</h5>
-                                <span><FaHouseUser/> Porto Alegre - RS</span>
+                                <span><FaHouseUser/> Porto Alegre - Brazil</span>
                             </div>
                             <p>Hello, I’m João Vitor and I’m a software engineer. I chose this profession because is a really great way to develop virtual ideas and bring them to reality.</p>
                             <p>I have been surfing in this ocean of knowledge and I&lsquo;m growing increasingly passionate about facing the new challenges found in this field.</p>

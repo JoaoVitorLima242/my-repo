@@ -13,13 +13,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         border-radius: 20px;
 
             h1 {
-              font-family: 'Lobster Two', cursive;
-              font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
               color: #50fa7b;
-              font-size: 80px;
+              font-size: 58px;
               max-width: 600px;
               text-align: center;
-              margin: 0;
+              margin: 0 auto;
             }
 
             button {
@@ -40,5 +40,22 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
                     background-color: #bd93f9;  
                 }
             }
+    }
+`
+
+export const Techs = styled.div`
+    background-color: #bd93f980;
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin: 80px auto 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    transition: background-color ease-out 0.2s;
+    text-align: center;
+
+    :hover {
+        background-color: #bd93f999;
     }
 `

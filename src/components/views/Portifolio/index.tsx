@@ -13,34 +13,34 @@ const Portifolio = () => {
 
     const projects : Project[] = [
         {
-            title: 'Marketplace',
-            text: 'Web application',
+            title: 'Barbada',
+            text: 'Marketplace',
             img: '/img/projects/barbada.png',
-            alt: "Marketplace com diversos produtos"
+            alt: "Marketplace with various products"
         },
         {
-            title: 'Sistema de pagamentos',
+            title: 'Payment System',
             text: 'Web application',
             img: '/img/projects/pmt.png',
-            alt: "Uma tabela com diversos dados"
+            alt: "A table with multiple data"
         },
         {
-            title: 'Bonuz Jurídico',
+            title: 'Jurídico',
             text: 'Landing Page',
             img: '/img/projects/bonuz.png',
-            alt: "Uma landing page com uma corujinha"
+            alt: "A landing page with a little owl"
         },
         {
-            title: 'Payroll - Folha de pagamento',
+            title: 'Payroll',
             text: 'Website',
             img: '/img/projects/payroll.png',
-            alt: "Uma tabela com diversos dados"
+            alt: "A table with multiple data"
         },
         {
-            title: 'Hubs',
-            text: 'Landing Page',
-            img: '/img/projects/bonuz-hub.png',
-            alt: "Uma landing page com uma corujinha"
+            title: 'Surfermates',
+            text: 'E-commerce',
+            img: '/img/projects/surf.png',
+            alt: "A landing page with a little owl"
         },
         {
             title: 'Flexbox CSS - Info',

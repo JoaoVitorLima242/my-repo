@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p, small {
     font-family: 'Inter', sans-serif;
+    margin: 0;
   }
 
   .wd-cont {
