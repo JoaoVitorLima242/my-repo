@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+
 // Components
 import About from '../components/views/About'
 import Portifolio from '../components/views/Portifolio'
