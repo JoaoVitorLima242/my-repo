@@ -20,7 +20,7 @@ const Portifolio = () => {
         },
         {
             title: 'Payment System',
-            text: 'Web application',
+            text: 'Corporate System',
             img: '/img/projects/pmt.png',
             alt: "A table with multiple data"
         },
@@ -32,7 +32,7 @@ const Portifolio = () => {
         },
         {
             title: 'Payroll',
-            text: 'Website',
+            text: 'Corporate System',
             img: '/img/projects/payroll.png',
             alt: "A table with multiple data"
         },
@@ -43,10 +43,10 @@ const Portifolio = () => {
             alt: "A landing page with a little owl"
         },
         {
-            title: 'Flexbox CSS - Info',
-            text: 'Website',
-            img: '/img/projects/flex.png',
-            alt: "Pagina informativa com comentarios sobre flexbox"
+            title: 'DoeSmart',
+            text: 'E-commerce',
+            img: '/img/projects/doeSmart.png',
+            alt: ""
         },
     ]
 
