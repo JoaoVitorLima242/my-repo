@@ -1,3 +1,4 @@
+import Container from "../../Container";
 import * as S from "./styles"
 import { 
     FaTv,
@@ -51,7 +52,7 @@ const Skills = () => {
     ]
    return (
         <S.Wrapper id="habilidade">
-            <div className="wd-cont">
+            <Container>
                 <S.CustomTitle>
                     <h1>Skills</h1>
                     <p>These are some skills of my skills!</p>
@@ -68,7 +69,7 @@ const Skills = () => {
                         
                     ))}
                 </div>
-            </div>
+            </Container>
         </S.Wrapper>
     );
 };

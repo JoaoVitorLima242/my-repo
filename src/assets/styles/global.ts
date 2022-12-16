@@ -29,12 +29,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     margin: 0;
   }
-
-  .wd-cont {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
 `;
 
 /* 

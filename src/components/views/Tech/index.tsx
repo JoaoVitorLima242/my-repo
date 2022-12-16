@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel"
 import Image from "next/image"
 
 import * as S from "./styles"
+import Container from "../../Container";
 
 const Tech = () => {
 
@@ -13,7 +14,7 @@ const Tech = () => {
     }
    return (
         <S.Wrapper>
-            <div className="wd-cont">
+            <Container>
                 <Carousel
                     responsive={reponsive}
                     ssr={true}
@@ -96,7 +97,7 @@ const Tech = () => {
                         />
                     </div>
                     </Carousel>
-                </div>
+                </Container>
         </S.Wrapper>
     );
 };

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import * as S from "./styles"
 import { FaSearch } from 'react-icons/fa'
+import Container from "../../Container";
 
 type Project = {
     title: string;
@@ -52,7 +53,7 @@ const Portifolio = () => {
 
     return (
         <S.Wrapper id="portifolio">
-            <div className="wd-cont">
+            <Container>
                 <S.CustomTitle>
                     <h1>Portifólio</h1>
                     <p>Estes são alguns projetos no qual participei!</p>
@@ -72,8 +73,7 @@ const Portifolio = () => {
                         </div>
                     ))}
                 </S.Projects>
-
-            </div>
+            </Container>
         </S.Wrapper>
     )
 }

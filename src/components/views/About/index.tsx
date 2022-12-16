@@ -2,35 +2,36 @@ import Image from "next/image"
 
 import * as S from "./styles"
 import { FaHouseUser, FaBug, FaUserAstronaut, FaCogs } from "react-icons/fa"
+import Container from "../../Container";
 
 type Card = {
-    h6: string;
-    span: string;
+    title: string;
+    text: string;
     icon: JSX.Element
 };
 
 const cards : Card[] = [
     {
-        h6: "2 Years with",
-        span: "JavaScript",
+        title: "2 Years with",
+        text: "JavaScript",
         icon: <FaBug/>
     },
     {
-        h6: "15+ Projects",
-        span: "Delivered",
+        title: "15+ Projects",
+        text: "Delivered",
         icon: <FaCogs/>
     },
     {
-        h6: "Freelancer",
-        span: "Available",
+        title: "Freelancer",
+        text: "Available",
         icon: <FaUserAstronaut/>
     },
 ]
 
 const About = () => {
     return (
-        <S.Wrapper id="sobre">
-            <div className="wd-cont">
+        <S.Wrapper>
+            <Container>
                 <S.CustomTitle>
                     <h1>About Me</h1>
                     <p>Hi! Nice to meet ...</p>
@@ -61,21 +62,21 @@ const About = () => {
                         </div>
                     </div>
                     <div className="icons">
-                        {cards.map(({h6, span, icon}) => (
+                        {cards.map(({title, text, icon}) => (
                             <>
                                 <div className="icon">
                                     {icon}
                                 </div>
                                 <div className="text">
-                                    <h6>{h6}</h6>
-                                    <span>{span}</span>
+                                    <h6>{title}</h6>
+                                    <span>{text}</span>
                                 </div>
                             </>
                         ))}
                     </div>
                 </div>
 
-            </div>
+            </Container>
         </S.Wrapper>
     )
 }
