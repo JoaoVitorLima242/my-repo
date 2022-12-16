@@ -3,15 +3,46 @@ import Image from "next/image"
 
 import * as S from "./styles"
 import Container from "../../Container";
+import { size } from "../../../constants/size";
 
 const Tech = () => {
 
     const reponsive = {
+        desktopL: {
+            breakpoint: { max: 4000, min: size.desktopL },
+            items: 10
+        },
         desktop: {
-            breakpoint: { max: 4000, min: 0 },
+            breakpoint: { max: size.desktopL, min: size.desktop },
             items: 6
-        }
+        },
+        laptop: {
+            breakpoint: { max: size.desktop, min: size.tablet },
+            items: 6
+        },
+        tablet: {
+            breakpoint: { max: size.tablet, min: size.mobile },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: size.mobile, min: 0 },
+            items: 2
+        },
+
     }
+
+    const items = [
+        'css',
+        'git',
+        'html',
+        'js',
+        'react',
+        'styled-components',
+        'ts',
+        'mongo',
+        'node'
+    ]
+
    return (
         <S.Wrapper>
             <Container>
@@ -23,79 +54,18 @@ const Tech = () => {
                     arrows={false}
                     showDots={true}
                 >
-                    <div className="item">
-                        <Image 
-                            src={"/img/css.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/git.png"} 
-                            alt="git"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/html.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/js.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/react.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/styled-components.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                            style={{background: 'white'}}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/ts.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/mongo.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
-                    <div className="item">
-                        <Image 
-                            src={"/img/node.png"} 
-                            alt="css"
-                            width={130}
-                            height={130}
-                        />
-                    </div>
+                    {
+                        items.map((item) => (
+                            <S.Item key={item}>
+                                <Image 
+                                    src={`/img/${item}.png`} 
+                                    alt={item}
+                                    width={130}
+                                    height={130}
+                                />
+                            </S.Item>
+                        ))
+                    }
                     </Carousel>
                 </Container>
         </S.Wrapper>

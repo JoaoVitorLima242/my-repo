@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import { device } from "../../../constants/size";
 
 export const Wrapper = styled.div`
     background-color: #44475a;
     padding: 40px 20px;
+
+    @media ${device.tablet} {
+        padding: 20px 10px;
+    }
+
 `
 
-export const Content = styled.div`
+export const Card = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -19,13 +25,37 @@ export const Content = styled.div`
     img {
         border-radius: 50%;
     }
+
+    @media ${device.tablet} {
+        padding: 20px;
+        margin: 10px 0;
+
+    }
+
+`
+
+export const CardContent = styled.div`
+    display: flex;
+
+    @media ${device.tablet} {
+        flex-direction: column;
+    }
+
+`
+
+export const ImageContainer = styled.div`
+    width: 200px;
+    @media ${device.tablet} {
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
 `
 
 export const Info = styled.div`
     display: flex;
 
     h5 {
-        font-family: 'Lobster Two',cursive;
+        font-family: 'Roboto', sans-serif;
         font-weight: 700;
         text-shadow: 4px 2px 0  #f8f8f220;
         color: #ff79c6;
@@ -40,6 +70,16 @@ export const Info = styled.div`
 
     span {
         color: #ff79c6;
+    }
+
+    @media ${device.tablet} {
+        h5 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
     }
 `
 
@@ -70,6 +110,7 @@ export const Icons = styled.div`
     justify-content: flex-end;
     padding: 35px 40px 5px;
     margin-left: auto;
+    flex-wrap: wrap;
 
     h6, span {
         margin-left: 10px;
@@ -83,8 +124,20 @@ export const Icons = styled.div`
     
     span {
         color: #ff79c6;
-    } 
+    }
+
+    @media ${device.tablet} {
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 `
+export const IconContainer = styled.div`
+    display: flex;
+    margin: 10px 0;
+` 
+
 
 export const Icon = styled.div`
     width: 46px;

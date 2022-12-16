@@ -36,16 +36,16 @@ const About = () => {
                     <h1>About Me</h1>
                     <p>Hi! Nice to meet ...</p>
                 </S.CustomTitle>
-                <S.Content>
-                    <div className="d-flex">
-                        <div>
+                <S.Card>
+                    <S.CardContent>
+                        <S.ImageContainer>
                             <Image 
                                 src='/img/my_photo.jpeg'
                                 alt="Uma foto minha sorrindo" 
                                 width={400}
                                 height={400}
                             />
-                        </div>
+                        </S.ImageContainer>
                         <S.Info>
                             <S.Line>
                                 <S.Ball />
@@ -60,10 +60,10 @@ const About = () => {
                                 <p>I consider myself a hardworking and creative person. I have been careful to stay in touch with the latest technologies, using only the latest cutting-edge material, within my work.</p>
                             </div>
                         </S.Info>
-                    </div>
+                    </S.CardContent>
                     <S.Icons>
                         {cards.map(({title, text, icon}) => (
-                            <>
+                            <S.IconContainer key={title}>
                                 <S.Icon>
                                     {icon}
                                 </S.Icon>
@@ -71,10 +71,10 @@ const About = () => {
                                     <h6>{title}</h6>
                                     <span>{text}</span>
                                 </div>
-                            </>
+                            </S.IconContainer>
                         ))}
                     </S.Icons>
-                </S.Content>
+                </S.Card>
             </Container>
         </S.Wrapper>
     )
