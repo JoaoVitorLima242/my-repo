@@ -26,74 +26,81 @@ export const CustomTitle = styled.div`
 `
 
 export const Projects = styled.div`
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, 360px);
-    gap: 30px;
-    grid-template-rows: repeat(2, 310px);
-    padding: 60px 0 30px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 360px);
+  gap: 30px;
+  grid-template-rows: repeat(2, 310px);
+  padding: 60px 0 30px;
+`
 
-    .project {
-        background-color: #44475a;
-        text-align: center;
-        border-radius: 6px;
-        transition: all ease-out 0.45s;
-        cursor: pointer;
-        position: relative;
+export const Project = styled.div`
+  background-color: #44475a;
+  text-align: center;
+  border-radius: 6px;
+  transition: all ease-out 0.45s;
+  cursor: pointer;
+  position: relative;
 
-        .more {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 6px 6px 0 0;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          width: 100%;
-          height: 220px;
-          background-color: #8be9fd99;
-          opacity: 0;
-          transition: all ease-out 0.25s;
+  img {
+    border-radius: 6px 6px 0 0;
+  }
 
-          svg {
-            color: white;
-            height: 60px;
-            width: 60px;
-          }
-        }
+  h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 10px;
+  }
+  p {
+    color: #8be9fd;
+    font-weight: 500;
+  }
 
-        .code {
-          opacity: 0;
-          color: #ffb86c;
-          transition: all ease-out 0.25s;
-        }
+  :hover {
+    transition: all ease-out 0.45s;
 
-        img {
-          border-radius: 6px 6px 0 0;
-        }
-
-        h5 {
-          font-family: 'Montserrat', sans-serif;
-          color: #fff;
-          font-weight: 700;
-          padding-top: 10px;
-        }
-        p {
-          color: #8be9fd;
-          font-weight: 500;
-        }
-
-        :hover {
-          transition: all ease-out 0.45s;
-          .code {
-            opacity: 1;
-          }
-
-          .more {
-            opacity: 1;
-          }
-        }
-
+    span, div {
+      opacity: 1;
     }
+  }
+`
+
+export const Code = styled.span`
+  opacity: 0;
+  color: #ffb86c;
+  transition: all ease-out 0.25s;
+
+  :hover {
+    transition: all ease-out 0.45s;
+    opacity: 1;
+  }
+
+`
+
+export const More = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 220px;
+  background-color: #8be9fd99;
+  opacity: 0;
+  transition: all ease-out 0.25s;
+
+  svg {
+    color: white;
+    height: 60px;
+    width: 60px;
+  }
+
+  :hover {
+    opacity: 1;
+  }
+
 `

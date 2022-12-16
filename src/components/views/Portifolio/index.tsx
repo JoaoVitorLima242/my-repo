@@ -60,17 +60,17 @@ const Portifolio = () => {
                 </S.CustomTitle>
                 <S.Projects>
                     {projects.map(({title, text, img, alt}, count) => (
-                        <div className="project" key={count}>
+                        <S.Project key={count}>
                             <Image
                                 width={360}
                                 height={220}
                                 src={img}
                                 alt={alt}
                             />
-                            <h5><span className="code">&lt; </span>{title}<span className="code"> &#47;&gt;</span></h5>
+                            <h5><S.Code>&lt; </S.Code>{title}<S.Code> &#47;&gt;</S.Code></h5>
                             <p>{text}</p>
-                            <div className="more"><FaSearch/></div>
-                        </div>
+                            <S.More><FaSearch/></S.More>
+                        </S.Project>
                     ))}
                 </S.Projects>
             </Container>
