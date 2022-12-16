@@ -1,5 +1,3 @@
-import Container from "../../Container";
-import * as S from "./styles"
 import { 
     FaTv,
     FaCogs,
@@ -8,6 +6,10 @@ import {
     FaBolt,
     FaBuilding
 } from "react-icons/fa"
+
+import Container from "../../Container";
+import * as S from "./styles"
+import Fade from 'react-reveal/Fade'
 
 type Expertise = {
     title: string;
@@ -53,22 +55,25 @@ const Skills = () => {
    return (
         <S.Wrapper id="habilidade">
             <Container>
+            <Fade top>
                 <S.CustomTitle>
                     <h1>Skills</h1>
                     <p>These are some skills of my skills!</p>
                 </S.CustomTitle>
-                <div className="expertises">
-                    {expertises.map(({title, description, icon}) => (
-                        <div className="expertise" key={title}>
-                            <div className="icon">
-                                {icon}
-                            </div>
-                            <h3>{title}</h3>
-                            <p>{description}</p>
-                        </div>
-                        
+            </Fade>
+                <S.Expertises>
+                    {expertises.map(({title, description, icon}, index) => (
+                        <Fade key={title}>
+                            <S.Expertise>
+                                <S.Icon>
+                                    {icon}
+                                </S.Icon>
+                                <h3>{title}</h3>
+                                <p>{description}</p>
+                            </S.Expertise>
+                        </Fade>
                     ))}
-                </div>
+                </S.Expertises>
             </Container>
         </S.Wrapper>
     );

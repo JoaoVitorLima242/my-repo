@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel"
 import Image from "next/image"
+import Fade from 'react-reveal/Fade'
 
 import * as S from "./styles"
 import Container from "../../Container";
@@ -46,28 +47,30 @@ const Tech = () => {
    return (
         <S.Wrapper>
             <Container>
-                <Carousel
-                    responsive={reponsive}
-                    ssr={true}
-                    className="carousel"
-                    infinite={true}
-                    arrows={false}
-                    showDots={true}
-                >
-                    {
-                        items.map((item) => (
-                            <S.Item key={item}>
-                                <Image 
-                                    src={`/img/${item}.png`} 
-                                    alt={item}
-                                    width={130}
-                                    height={130}
-                                />
-                            </S.Item>
-                        ))
-                    }
+                <Fade>
+                    <Carousel
+                        responsive={reponsive}
+                        ssr
+                        className="carousel"
+                        infinite
+                        arrows={false}
+                        showDots
+                    >
+                        {
+                            items.map((item) => (
+                                <S.Item key={item}>
+                                    <Image 
+                                        src={`/img/${item}.png`} 
+                                        alt={item}
+                                        width={130}
+                                        height={130}
+                                    />
+                                </S.Item>
+                            ))
+                        }
                     </Carousel>
-                </Container>
+                </Fade>
+            </Container>
         </S.Wrapper>
     );
 };

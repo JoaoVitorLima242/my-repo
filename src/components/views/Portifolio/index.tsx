@@ -1,4 +1,6 @@
 import Image from "next/image"
+import Fade from "react-reveal/Fade"
+
 import * as S from "./styles"
 import { FaSearch } from 'react-icons/fa'
 import Container from "../../Container";
@@ -55,27 +57,31 @@ const Portifolio = () => {
         <S.Wrapper id="portifolio">
             <Container>
                 <S.CustomTitle>
-                    <h1>Portifolio</h1>
-                    <p>These are some projects I participated in!</p>
+                    <Fade top>
+                        <h1>Portifolio</h1>
+                        <p>These are some projects I participated in!</p>
+                    </Fade>
                 </S.CustomTitle>
                 <S.Projects>
                     {projects.map(({title, text, img, alt}, count) => (
-                        <S.Project key={count}>
-                            <S.ImageContainer>
-                                <Image
-                                    layout="fill"
-                                    src={img}
-                                    alt={alt}
-                                />
-                                <S.More><FaSearch/></S.More>
-                            </S.ImageContainer>
-                            <div>
-                                <h5>
-                                    <S.Code>&lt; </S.Code>{title}<S.Code> &#47;&gt;</S.Code>
-                                </h5>
-                                <p>{text}</p>
-                            </div>
-                        </S.Project>
+                        <Fade key={count}>
+                            <S.Project>
+                                <S.ImageContainer>
+                                    <Image
+                                        layout="fill"
+                                        src={img}
+                                        alt={alt}
+                                    />
+                                    <S.More><FaSearch/></S.More>
+                                </S.ImageContainer>
+                                <div>
+                                    <h5>
+                                        <S.Code>&lt; </S.Code>{title}<S.Code> &#47;&gt;</S.Code>
+                                    </h5>
+                                    <p>{text}</p>
+                                </div>
+                            </S.Project>
+                        </Fade>
                     ))}
                 </S.Projects>
             </Container>
