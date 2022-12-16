@@ -5,11 +5,11 @@ const Header = () => {
     return( 
         <S.Wrapper>
             <h1>João Vitor Brietzke Lima</h1>
-            <ul className="nav-links">
+            <S.Navlinks>
                 <li>Sobre</li>
                 <li>Habilidades</li>
                 <li>Portifólio</li>
-            </ul> 
+            </S.Navlinks> 
         </S.Wrapper>
 
     )

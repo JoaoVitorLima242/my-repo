@@ -34,14 +34,13 @@ const About = () => {
         <S.Wrapper>
             <Container>
                 <S.CustomTitle>
-                    <Fade top>
+                    <Fade top duration={1300}>
                         <h1>About Me</h1>
                         <p>Hi! Nice to meet ...</p>
                     </Fade>
                 </S.CustomTitle>
                 <Fade>
                     <S.Card>
-
                         <S.CardContent>
                             <S.ImageContainer>
                                 <Image 

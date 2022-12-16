@@ -57,14 +57,14 @@ const Portifolio = () => {
         <S.Wrapper id="portifolio">
             <Container>
                 <S.CustomTitle>
-                    <Fade top>
+                    <Fade top duration={1300}>
                         <h1>Portifolio</h1>
                         <p>These are some projects I participated in!</p>
                     </Fade>
                 </S.CustomTitle>
                 <S.Projects>
                     {projects.map(({title, text, img, alt}, count) => (
-                        <Fade key={count}>
+                        <Fade key={count} duration={1300}>
                             <S.Project>
                                 <S.ImageContainer>
                                     <Image

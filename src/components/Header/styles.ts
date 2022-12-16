@@ -15,12 +15,12 @@ export const Wrapper = styled.div`
         color: white;
         text-shadow: 4px 2px 0 #6272a4;
         font-weight: 900;
-    }
+    }    
+    `
 
-    .nav-links {
-        display: flex;
+export const Navlinks = styled.ul`
+    display: flex;
 
-    }
     li { 
         list-style-type: none;
         padding: 0 20px;
@@ -28,5 +28,4 @@ export const Wrapper = styled.div`
         font-family: 'Montserrat', sans-serif;
         color: #bd93f9;
     }
-
-    `
+`

@@ -55,7 +55,7 @@ const Skills = () => {
    return (
         <S.Wrapper id="habilidade">
             <Container>
-            <Fade top>
+            <Fade top duration={1300}>
                 <S.CustomTitle>
                     <h1>Skills</h1>
                     <p>These are some skills of my skills!</p>
@@ -63,7 +63,7 @@ const Skills = () => {
             </Fade>
                 <S.Expertises>
                     {expertises.map(({title, description, icon}, index) => (
-                        <Fade key={title}>
+                        <Fade key={title} duration={1300}>
                             <S.Expertise>
                                 <S.Icon>
                                     {icon}

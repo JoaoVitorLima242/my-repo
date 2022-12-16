@@ -47,7 +47,7 @@ const Tech = () => {
    return (
         <S.Wrapper>
             <Container>
-                <Fade>
+                <Fade duration={1300}>
                     <Carousel
                         responsive={reponsive}
                         ssr
