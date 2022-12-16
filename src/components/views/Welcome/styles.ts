@@ -25,6 +25,7 @@ export const Content = styled.div`
     }
 
     @media ${device.tablet} {
+        margin: 10px 16px;
         h1 {
             font-size: 32px;
         }
@@ -48,6 +49,8 @@ export const Techs = styled.div`
     }
 
     @media ${device.tablet} {
-        font-size: 16px;
+        padding: 10px 3px;
+        margin: 20px auto 0;
+        font-size: 14px;
     }
 `
