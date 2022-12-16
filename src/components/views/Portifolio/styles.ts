@@ -16,6 +16,7 @@ export const CustomTitle = styled.div`
       padding-top: 40px;
       text-shadow: 4px 2px 0 #44475a;
       font-weight: 700;
+      margin: 0 14px;
     }
     p {
       color: #f8f8f2;
@@ -28,10 +29,11 @@ export const CustomTitle = styled.div`
 export const Projects = styled.div`
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
   gap: 30px;
-  grid-template-rows: repeat(2, 310px);
+  grid-template-rows: 310px;
   padding: 60px 0 30px;
+  margin: 0 14px;
 `
 
 export const Project = styled.div`
@@ -55,6 +57,7 @@ export const Project = styled.div`
   p {
     color: #8be9fd;
     font-weight: 500;
+    padding-bottom: 20px;
   }
 
   :hover {
@@ -78,6 +81,12 @@ export const Code = styled.span`
 
 `
 
+export const ImageContainer = styled.div`
+  height: 220px;
+  position: relative;
+  margin-bottom: 10px;
+`
+
 export const More = styled.div`
   display: flex;
   align-items: center;
@@ -88,7 +97,7 @@ export const More = styled.div`
   right: 0;
   top: 0;
   width: 100%;
-  height: 220px;
+  height: 100%;
   background-color: #8be9fd99;
   opacity: 0;
   transition: all ease-out 0.25s;

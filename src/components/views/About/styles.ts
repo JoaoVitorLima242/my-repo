@@ -44,8 +44,8 @@ export const CardContent = styled.div`
 `
 
 export const ImageContainer = styled.div`
-    width: 200px;
     @media ${device.tablet} {
+        width: 200px;
         margin: 0 auto;
         padding-bottom: 20px;
     }

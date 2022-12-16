@@ -55,21 +55,26 @@ const Portifolio = () => {
         <S.Wrapper id="portifolio">
             <Container>
                 <S.CustomTitle>
-                    <h1>Portifólio</h1>
-                    <p>Estes são alguns projetos no qual participei!</p>
+                    <h1>Portifolio</h1>
+                    <p>These are some projects I participated in!</p>
                 </S.CustomTitle>
                 <S.Projects>
                     {projects.map(({title, text, img, alt}, count) => (
                         <S.Project key={count}>
-                            <Image
-                                width={360}
-                                height={220}
-                                src={img}
-                                alt={alt}
-                            />
-                            <h5><S.Code>&lt; </S.Code>{title}<S.Code> &#47;&gt;</S.Code></h5>
-                            <p>{text}</p>
-                            <S.More><FaSearch/></S.More>
+                            <S.ImageContainer>
+                                <Image
+                                    layout="fill"
+                                    src={img}
+                                    alt={alt}
+                                />
+                                <S.More><FaSearch/></S.More>
+                            </S.ImageContainer>
+                            <div>
+                                <h5>
+                                    <S.Code>&lt; </S.Code>{title}<S.Code> &#47;&gt;</S.Code>
+                                </h5>
+                                <p>{text}</p>
+                            </div>
                         </S.Project>
                     ))}
                 </S.Projects>
