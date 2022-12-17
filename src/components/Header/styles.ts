@@ -32,7 +32,7 @@ export const LogoContainer = styled.div`
         margin-left: 10px;
         cursor: pointer;
     }
-
+    
     @media ${device.tablet} {
         h1 {
             display: none;
@@ -79,6 +79,13 @@ export const Navlinks = styled.ul`
         color: #bd93f9;
         cursor: pointer;
     }
+
+    @media ${device.laptop} {
+        li {
+            font-size: 18px;
+        }
+    }
+
 
     @media ${device.tablet} {
         display: none;
