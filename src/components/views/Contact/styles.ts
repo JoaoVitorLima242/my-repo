@@ -14,7 +14,7 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     margin: 20px auto 0;
-    padding: 1rem 1.4rem;
+    padding: 1rem 1.4rem 1.8rem;
     border-radius: 12px;
     border: solid #50fa7b70 2px;
     box-shadow: 0 0 10px 2px #50fa7b70;
@@ -49,7 +49,7 @@ export const Form = styled.form`
     }
     
     textarea {
-        min-height: 130px;
+        min-height: 220px;
     }
     
 `
