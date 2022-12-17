@@ -31,7 +31,7 @@ const cards : Card[] = [
 
 const About = () => {
     return (
-        <S.Wrapper>
+        <S.Wrapper id="About">
             <Container>
                 <S.CustomTitle>
                     <Fade top duration={1300}>

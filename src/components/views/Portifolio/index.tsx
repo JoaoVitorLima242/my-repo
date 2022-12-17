@@ -54,7 +54,7 @@ const Portifolio = () => {
     ]
 
     return (
-        <S.Wrapper id="portifolio">
+        <S.Wrapper id="Portifolio">
             <Container>
                 <S.CustomTitle>
                     <Fade top duration={1300}>

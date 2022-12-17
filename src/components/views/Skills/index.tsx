@@ -53,7 +53,7 @@ const Skills = () => {
 
     ]
    return (
-        <S.Wrapper id="habilidade">
+        <S.Wrapper id="Skills">
             <Container>
             <Fade top duration={1300}>
                 <S.CustomTitle>

@@ -30,6 +30,7 @@ export const LogoContainer = styled.div`
         text-shadow: 4px 2px 0 #6272a4;
         font-weight: 900;
         margin-left: 10px;
+        cursor: pointer;
     }
 
     @media ${device.tablet} {
@@ -45,6 +46,7 @@ export const LogoContainer = styled.div`
 
 export const Logo = styled.div`
     display: none;
+    cursor: pointer;
 
     @media ${device.tablet} {
         div {
@@ -75,6 +77,7 @@ export const Navlinks = styled.ul`
         font-size: 22px;
         font-family: 'Montserrat', sans-serif;
         color: #bd93f9;
+        cursor: pointer;
     }
 
     @media ${device.tablet} {
@@ -113,12 +116,14 @@ export const DropdownSection = styled.div<TDropdownSection>`
         bottom: 200px;
 
         p {
+            cursor: pointer;
             margin: 0 auto;
             color: #fff;
             text-align: center;
             font-size: 20px;
             padding: 10px 0;
             bottom: 200px;
+            font-weight: bold
         }
 
         ${isOpen && dropdownModifiers.isOpen}
