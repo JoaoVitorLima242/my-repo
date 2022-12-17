@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Fullstack Web & Mobile Developer</title>
+        <title>Full-Stack Web & Mobile Developer</title>
         <meta name="description" content="Hello, I’m João Vitor and I’m a Full Stack Web & Mobile Developer." />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link 
