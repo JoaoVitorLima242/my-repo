@@ -1,5 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../constants/size";
+
+type TDropdownSection = {
+    isOpen: boolean
+} 
+
+const dropdownModifiers = {
+    isOpen: () => css`
+        height: auto;
+        bottom: 200px;
+        p {
+            bottom: 200px;
+
+        }
+    `
+}
 
 export const Wrapper = styled.div`
     background-color: #282a36;
@@ -47,6 +62,9 @@ export const TopSection = styled.div`
     justify-content: space-between;
     height: 100%;
     padding: 0 40px;
+    z-index: 100;
+    background-color: #282a36;
+    position: relative;
 `
 
 export const Navlinks = styled.ul`
@@ -83,6 +101,25 @@ export const HamburgerIcon = styled.button`
     }
 `
 
-export const DropdownSection = styled.div`
-    height: 100px;
+export const DropdownSection = styled.div<TDropdownSection>`
+    ${({ isOpen }) => css`
+        background-color: #282a36;
+        transition: all 0.2s; 
+        position: relative;
+        z-index: 1;
+        bottom: 0;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        padding-bottom: 10px;
+
+        p {
+            margin: 0 auto;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 0;
+        }
+
+        ${isOpen && dropdownModifiers.isOpen}
+    `}
 `
