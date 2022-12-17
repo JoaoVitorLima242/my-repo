@@ -8,10 +8,9 @@ type TDropdownSection = {
 const dropdownModifiers = {
     isOpen: () => css`
         height: auto;
-        bottom: 200px;
+        bottom: 0;
         p {
-            bottom: 200px;
-
+            bottom: 0;
         }
     `
 }
@@ -111,6 +110,7 @@ export const DropdownSection = styled.div<TDropdownSection>`
         border-radius: 0 0 10px 10px;
         overflow: hidden;
         padding-bottom: 10px;
+        bottom: 200px;
 
         p {
             margin: 0 auto;
@@ -118,6 +118,7 @@ export const DropdownSection = styled.div<TDropdownSection>`
             text-align: center;
             font-size: 20px;
             padding: 10px 0;
+            bottom: 200px;
         }
 
         ${isOpen && dropdownModifiers.isOpen}
