@@ -1,13 +1,12 @@
 import Image from "next/image"
 import { useState } from "react"
-import Link from "next/link"
 // @ts-ignore
 import * as animateScroll from "svelte-scrollto-next"
 
 import * as S from "./styles"
 
 const Header = () => {
-    const [dropdown, setDropdown] = useState(false)
+    const [dropdown, setDropdown] = useState(false)    
 
     const dropdownHandler = () => {
         setDropdown(!dropdown)
@@ -40,6 +39,7 @@ const Header = () => {
                     <li onClick={() => scrollToElementHandler('About')}>About Me</li>
                     <li onClick={() => scrollToElementHandler('Skills')}>Skills</li>
                     <li onClick={() => scrollToElementHandler('Portifolio')}>Portifolio</li>
+                    <li onClick={() => scrollToElementHandler('Contact')}>Contact Me</li>
                 </S.Navlinks>
                 <S.HamburgerIcon onClick={dropdownHandler}>
                     <div></div>
@@ -51,6 +51,7 @@ const Header = () => {
                 <p onClick={() => scrollToElementHandler('About')}>About Me</p>
                 <p onClick={() => scrollToElementHandler('Skills')}>Skills</p>
                 <p onClick={() => scrollToElementHandler('Portifolio')}>Portifolio</p>
+                <p onClick={() => scrollToElementHandler('Contact')}>Contact Me</p>
             </S.DropdownSection>
         </S.Wrapper>
 

@@ -18,15 +18,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   padding, li {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   
   html {
     scroll-behavior: smooth;
   }
 
-  p, small {
-    font-family: 'Inter', sans-serif;
+  p, small{
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
   }
 `;

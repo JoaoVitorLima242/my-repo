@@ -6,6 +6,7 @@ import Portifolio from '../components/views/Portifolio'
 import Skills from '../components/views/Skills'
 import Tech from '../components/views/Tech'
 import Welcome from '../components/views/Welcome'
+import Contact from '../components/views/Contact'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Skills/>
       <Tech/>
       <Portifolio/>
+      <Contact/>
     </>
   )
 }

@@ -21,6 +21,8 @@ export const Card = styled.div`
     margin: 20px;
     border-radius: 12px;
     position: relative;
+    border: solid #ff79c670 2px;
+    box-shadow: 0 0 10px 2px #ff79c670;
 
     img {
         border-radius: 50%;

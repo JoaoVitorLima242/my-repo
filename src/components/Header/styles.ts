@@ -122,7 +122,7 @@ export const DropdownSection = styled.div<TDropdownSection>`
             text-align: center;
             font-size: 20px;
             padding: 10px 0;
-            bottom: 200px;
+            bottom: 240px;
             font-weight: bold
         }
 
