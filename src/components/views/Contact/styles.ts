@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SiUpwork } from 'react-icons/si'
+import { device } from "../../../constants/size";
 
 
 export const Wrapper = styled.div`
@@ -100,6 +101,7 @@ export const Button = styled.button`
 export const SocialMedias = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 `
 export const SocialMediaButton = styled.div`
     position: relative;
@@ -130,6 +132,10 @@ export const SocialMediaButton = styled.div`
 
     :active {
         background: #50fa7b99;
+    }
+
+    @media ${device.tablet} {
+        margin: 10px 6px;
     }
 
 `
