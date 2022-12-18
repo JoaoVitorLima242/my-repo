@@ -102,11 +102,13 @@ export const SocialMedias = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 20px 0;
 `
 export const SocialMediaButton = styled.div`
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
     background: transparent;
     border: none;
@@ -119,6 +121,7 @@ export const SocialMediaButton = styled.div`
     transition: all 0.25s;
     border: solid #50fa7b 1px;
     cursor: pointer;
+    width: 100px;
 
     svg {
         font-size: 15px;
@@ -136,6 +139,16 @@ export const SocialMediaButton = styled.div`
 
     @media ${device.tablet} {
         margin: 10px 6px;
+        width: auto;
+
+        span {
+            display: none;
+        }
+
+        svg {
+            font-size: 20px;
+            margin: 0 5px;
+        }
     }
 
 `

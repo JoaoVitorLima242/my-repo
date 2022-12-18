@@ -1,10 +1,30 @@
 import Fade from 'react-reveal/Fade'
 import { SiUpwork, SiGithub, SiLinkedin } from 'react-icons/si'
+import { useForm } from 'react-hook-form'
 
 import * as S from './styles'
-import Link from 'next/link'
+import axios from 'axios'
+
+type FormFields = {
+    name: string
+    email: string
+    subject: string
+    message: string
+}
 
 const Contact =  () => {
+    const { register, handleSubmit } = useForm<FormFields>()
+
+    const onSubmit = async (data: FormFields) => {
+        try {
+            const response = await axios.post('/api/contact-me', data)
+
+            console.log(response)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     return (
         <S.Wrapper id='Contact'>
             <Fade top>
@@ -14,31 +34,33 @@ const Contact =  () => {
                 </S.CustomTitle>
             </Fade>
             <Fade>
-                <S.Form>
+                <S.Form onSubmit={handleSubmit(onSubmit)}>
                     <label>Name</label>
-                    <input />
+                    <input {...register('name')}/>
+                    <label>Email</label>
+                    <input {...register('email')}/>
                     <label>Subject</label>
-                    <input />
+                    <input {...register('subject')}/>
                     <label>Message</label>
-                    <textarea />
+                    <textarea {...register('message')}/>
                     <S.Button>SUBMIT</S.Button>
                     <S.SocialMedias>
                         <a href='https://github.com/JoaoVitorLima242' target='_blank' rel="noreferrer">
                             <S.SocialMediaButton>
                                 <SiGithub />
-                                Github
+                                <span>Github</span>
                             </S.SocialMediaButton>
                         </a>
                         <a href='https://www.linkedin.com/in/jo%C3%A3o-vitor-brietzke-de-lima-804a60209/' target='_blank' rel="noreferrer">
                             <S.SocialMediaButton>
                                 <SiLinkedin />
-                                LinkedIn
+                                <span>LinkedIn</span>
                             </S.SocialMediaButton>
                         </a>
                         <a href='https://www.upwork.com/freelancers/~018ea73575e64d2ca4' target='_blank' rel="noreferrer">
                             <S.SocialMediaButton>
                                 <SiUpwork />
-                                UpWork
+                                <span>UpWork</span>
                             </S.SocialMediaButton>
                         </a>
 
