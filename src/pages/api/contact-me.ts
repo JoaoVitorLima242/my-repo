@@ -14,6 +14,7 @@ type ResponseData = {
   
 const SENDGRID_KEY = process.env.SENDGRID_KEY
 const MY_EMAIL = process.env.MY_EMAIL
+const EMAIL_SENDER = process.env.EMAIL_SENDER
 
 export default function handler(
   req: ExtendedNextApiRequest,
@@ -35,7 +36,7 @@ export default function handler(
 
     mail.send({
         to: MY_EMAIL,
-        from: MY_EMAIL,
+        from: EMAIL_SENDER,
         subject,
         text: message,
         html: message.replace(/rn/g, '<br>')
