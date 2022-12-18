@@ -1,9 +1,10 @@
 import Fade from 'react-reveal/Fade'
 import { SiUpwork, SiGithub, SiLinkedin } from 'react-icons/si'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 import * as S from './styles'
-import axios from 'axios'
+import Alert from '../../Alert'
 
 export type ContactFormFields = {
     name: string
@@ -13,7 +14,9 @@ export type ContactFormFields = {
 }
 
 const Contact =  () => {
-    const { register, handleSubmit } = useForm<ContactFormFields>()
+    const { register, handleSubmit, formState: { errors }} = useForm<ContactFormFields>()
+
+    const missingRequiredValue = !!errors.name || !!errors.email || !!errors.subject || !!errors.message
 
     const onSubmit = async (data: ContactFormFields) => {
         try {
@@ -36,14 +39,29 @@ const Contact =  () => {
             <Fade>
                 <S.Form onSubmit={handleSubmit(onSubmit)}>
                     <label>Name</label>
-                    <input {...register('name')}/>
+                    <S.Input 
+                        error={!!errors.name} 
+                        {...register('name', { required: true })}
+                    />
                     <label>Email</label>
-                    <input {...register('email')}/>
+                    <S.Input 
+                        error={!!errors.email} 
+                        {...register('email', { required: true })}
+                    />
                     <label>Subject</label>
-                    <input {...register('subject')}/>
+                    <S.Input 
+                        error={!!errors.subject} 
+                        {...register('subject', { required: true })}
+                    />
                     <label>Message</label>
-                    <textarea {...register('message')}/>
+                    <S.TextArea 
+                        error={!!errors.message} 
+                        {...register('message', { required: true })}
+                    />
                     <S.Button>SUBMIT</S.Button>
+                    { missingRequiredValue &&
+                        <Alert type='error' message='Please, fill in all fields of the form'/>
+                    }
                     <S.SocialMedias>
                         <a href='https://github.com/JoaoVitorLima242' target='_blank' rel="noreferrer">
                             <S.SocialMediaButton>
@@ -63,7 +81,6 @@ const Contact =  () => {
                                 <span>UpWork</span>
                             </S.SocialMediaButton>
                         </a>
-
                     </S.SocialMedias>
                 </S.Form> 
             </Fade>

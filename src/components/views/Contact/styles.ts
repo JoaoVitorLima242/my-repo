@@ -1,7 +1,17 @@
-import styled from "styled-components";
-import { SiUpwork } from 'react-icons/si'
+import styled, { css } from "styled-components";
+
 import { device } from "../../../constants/size";
 
+type FormInputs = {
+    error: boolean
+}
+
+const formInputsModifiers = {
+    error: () => css`
+        border: solid #FA3742 1px;
+        box-shadow: 0 0 10px 1px #FA374240;
+    `
+}
 
 export const Wrapper = styled.div`
     background-color: #282a36;
@@ -30,8 +40,10 @@ export const Form = styled.form`
         font-weight: 500;
         margin: 14px 0 4px;
     }
+`
 
-    input, textarea {
+export const Input = styled.input<FormInputs>`
+    ${({ error }) => css`
         border: solid #50fa7b10 1px;
         box-shadow: 0 0 10px 1px #50fa7b10;
         border-radius: 4px;
@@ -47,12 +59,33 @@ export const Form = styled.form`
             border: solid #50fa7b40 1px;
             box-shadow: 0 0 10px 1px #50fa7b40;
         }
-    }
-    
-    textarea {
+
+        ${error && formInputsModifiers.error}
+    `}
+
+`
+
+export const TextArea = styled.textarea<FormInputs>`
+    ${({ error }) => css`
+        border: solid #50fa7b10 1px;
+        box-shadow: 0 0 10px 1px #50fa7b10;
+        border-radius: 4px;
+        background: #44475a;
+        padding: 6px 10px;
+        color: #ddd;
+        font-size: 18px;
+        transition: box-shadow 0.15s;
+        font-family: 'Montserrat', sans-serif;
         min-height: 220px;
-    }
-    
+
+        :focus-visible {
+            outline: 0;
+            border: solid #50fa7b40 1px;
+            box-shadow: 0 0 10px 1px #50fa7b40;
+        }
+
+        ${error && formInputsModifiers.error}
+    `}
 `
 
 export const CustomTitle = styled.div`
