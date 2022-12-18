@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import * as S from './styles'
 import axios from 'axios'
 
-type FormFields = {
+export type ContactFormFields = {
     name: string
     email: string
     subject: string
@@ -13,9 +13,9 @@ type FormFields = {
 }
 
 const Contact =  () => {
-    const { register, handleSubmit } = useForm<FormFields>()
+    const { register, handleSubmit } = useForm<ContactFormFields>()
 
-    const onSubmit = async (data: FormFields) => {
+    const onSubmit = async (data: ContactFormFields) => {
         try {
             const response = await axios.post('/api/contact-me', data)
 
