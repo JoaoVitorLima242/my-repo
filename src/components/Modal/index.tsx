@@ -1,28 +1,31 @@
+import Image from 'next/image';
 import * as S from './styles'
-import { ReactNode } from 'react'
 
 export type ModalProps = {
   isOpen: boolean;
-  children: ReactNode
-  modalHandler: () => void
-  withCustomBackground?: boolean
+  onClose: () => void
+  image?: string
 }
 
 
 
 
-const Modal = ({ children, isOpen,  modalHandler,  withCustomBackground }: ModalProps) => {
+const Modal = ({ isOpen,  onClose, image = '' }: ModalProps) => {
   return (
     <S.Wrapper
       isOpen={isOpen}
       width={600}
     >
       <S.Overlay
-        onClick={modalHandler}
+        onClick={onClose}
       />
       <S.ModalDialog>
         <S.ModalContent>
-          {children}
+          <Image 
+            layout='fill'
+            src={image || '/img/logo.png'}
+            alt='Portifolio project image'
+          />
         </S.ModalContent>
       </S.ModalDialog>
     </S.Wrapper>

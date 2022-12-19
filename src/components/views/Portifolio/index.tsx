@@ -12,7 +12,11 @@ type Project = {
     alt: string;
 }
 
-const Portifolio = () => {
+type MyProps = {
+    onSelectPortifolio: (image: string) => void
+}
+
+const Portifolio = ({ onSelectPortifolio }: MyProps) => {
 
     const projects : Project[] = [
         {
@@ -53,6 +57,10 @@ const Portifolio = () => {
         },
     ]
 
+    const onSelectPortifolioHandler = (portifolio: string) => {
+        onSelectPortifolio(portifolio)
+    }
+
     return (
         <S.Wrapper id="Portifolio">
             <Container>
@@ -65,7 +73,7 @@ const Portifolio = () => {
                 <S.Projects>
                     {projects.map(({title, text, img, alt}, count) => (
                         <Fade key={count} duration={1300}>
-                            <S.Project>
+                            <S.Project onClick={() => onSelectPortifolioHandler(img)}>
                                 <S.ImageContainer>
                                     <Image
                                         layout="fill"

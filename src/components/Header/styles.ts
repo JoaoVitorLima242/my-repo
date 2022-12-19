@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     height: 78px;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 5;
 `
 
 export const LogoContainer = styled.div`
