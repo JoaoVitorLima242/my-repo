@@ -21,7 +21,7 @@ type PostResponse = {
 }
 
 const Contact =  () => {
-    const { register, handleSubmit, formState: { errors }} = useForm<ContactFormFields>()
+    const { register, handleSubmit, formState: { errors }, reset} = useForm<ContactFormFields>()
 
     const [ error, setError ] = useState('')
     const [ emailSuccess, setEmailSuccess] = useState('')
@@ -37,6 +37,8 @@ const Contact =  () => {
         } catch (err) {
             setError('There was an error sending your email')
         }
+
+        reset()
     }
 
     return (
