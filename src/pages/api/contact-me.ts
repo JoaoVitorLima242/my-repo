@@ -42,7 +42,7 @@ export default function handler(
         html: message.replace(/rn/g, '<br>')
     })
     .then(() => {
-        res.status(200).json({ message: 'Email send with sucess!', error: false });
+        res.status(200).json({ message: 'Email send with success!', error: false });
     })
     .catch(error => {
         console.log(error)

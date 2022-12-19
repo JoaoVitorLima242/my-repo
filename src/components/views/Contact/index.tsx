@@ -1,4 +1,5 @@
 import Fade from 'react-reveal/Fade'
+import { useState } from 'react'
 import { SiUpwork, SiGithub, SiLinkedin } from 'react-icons/si'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
@@ -13,18 +14,28 @@ export type ContactFormFields = {
     message: string
 }
 
+type PostResponse = {
+    message: string
+    error: boolean
+
+}
+
 const Contact =  () => {
     const { register, handleSubmit, formState: { errors }} = useForm<ContactFormFields>()
 
+    const [ error, setError ] = useState('')
+    const [ emailSuccess, setEmailSuccess] = useState('')
     const missingRequiredValue = !!errors.name || !!errors.email || !!errors.subject || !!errors.message
 
     const onSubmit = async (data: ContactFormFields) => {
+        setError('')
+        setEmailSuccess('')
         try {
-            const response = await axios.post('/api/contact-me', data)
+            await axios.post<PostResponse>('/api/contact-me', data)
 
-            console.log(response)
+            setEmailSuccess('Email send with success!')
         } catch (err) {
-            console.log(err)
+            setError('There was an error sending your email')
         }
     }
 
@@ -59,8 +70,11 @@ const Contact =  () => {
                         {...register('message', { required: true })}
                     />
                     <S.Button>SUBMIT</S.Button>
-                    { missingRequiredValue &&
-                        <Alert type='error' message='Please, fill in all fields of the form'/>
+                    { error || missingRequiredValue && 
+                        <Alert type='error' message={error || 'Please, fill in all fields of the form'}/>
+                    }
+                    { emailSuccess &&  
+                        <Alert type='success' message={emailSuccess}/>
                     }
                     <S.SocialMedias>
                         <a href='https://github.com/JoaoVitorLima242' target='_blank' rel="noreferrer">
