@@ -9,6 +9,8 @@ import Tech from '../components/views/Tech'
 import Welcome from '../components/views/Welcome'
 import Contact from '../components/views/Contact'
 import Modal from '../components/Modal'
+import Head from 'next/head'
+
 
 const Home: NextPage = () => {
   const [modal, setModal] = useState(false)
@@ -24,7 +26,26 @@ const Home: NextPage = () => {
   }
   
   return (
-    <>
+    <div>
+      <Head>
+        <title>Full-Stack Web & Mobile Developer</title>
+        <meta 
+          name="description" 
+          content="Hello, I’m João Vitor and I’m a Full Stack Web & Mobile Developer." 
+        />
+        <meta 
+          property="og:title" 
+          content="João Vitor Brietzke de Lima" 
+        />
+        <meta
+          property="og:description"
+          content="Hello, I’m João Vitor and I’m a Full Stack Web & Mobile Developer. Come and see my work."
+        />
+        <meta
+          property="og:image"
+          content="/img/my_photo.jpeg"
+        />
+      </Head>
       <Modal 
         isOpen={modal}
         onClose={onCloseModalHandler}
@@ -38,7 +59,7 @@ const Home: NextPage = () => {
         onSelectPortifolio={onSelectModalImage}
       />
       <Contact/>
-    </>
+    </div>
   )
 }
 
