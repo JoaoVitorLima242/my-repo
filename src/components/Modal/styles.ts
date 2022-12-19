@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components"
+import { device } from "../../constants/size"
 
 type TWrapper = {
     isOpen: boolean
-    width: number
 }
 
 const wrapperModifiers = {
@@ -15,9 +15,8 @@ const wrapperModifiers = {
 export const Wrapper = styled.div.attrs(() => ({
     className: 'modal'
   }))<TWrapper>`
-    ${({ isOpen, width }) => css`
-        --bs-modal-width: ${!!width && `${width}px`};
-        
+    ${({ isOpen }) => css`
+        --bs-modal-width: 800px;
         ${isOpen && wrapperModifiers.isOpen()};
     `}
 `
@@ -39,7 +38,7 @@ export const ModalDialog = styled.div.attrs(() => ({
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 80px 0;
+    padding: 0 0;
     z-index: 20;
 `
   
@@ -54,26 +53,15 @@ export const ModalContent = styled.div.attrs(() => ({
     position: relative;
     z-index: 999;
     margin: 0 14px;
-`
-  
-export const ModalHeader = styled.div.attrs(() => ({
-    className: 'modal-header'
-}))`
-    border: none
-`
-  
-export const CloseButton = styled.button`
-    width: 30px;
-    height: 30px;
-    position: relative;
-    border: none;
-    background-color: transparent;
-    margin-left: auto;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
 
-    :hover {
-    opacity: 0.8;
-    transition: ease-in-out 50ms all;
+    @media ${device.tablet} {
+        height: 300px;
+    }
+    @media ${device.mobile} {
+        height: 200px;
+
     }
 `
-  
-  

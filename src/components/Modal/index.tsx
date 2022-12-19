@@ -14,7 +14,6 @@ const Modal = ({ isOpen,  onClose, image = '' }: ModalProps) => {
   return (
     <S.Wrapper
       isOpen={isOpen}
-      width={600}
     >
       <S.Overlay
         onClick={onClose}
