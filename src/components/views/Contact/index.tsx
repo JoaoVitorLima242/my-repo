@@ -72,7 +72,7 @@ const Contact =  () => {
                         {...register('message', { required: true })}
                     />
                     <S.Button>SUBMIT</S.Button>
-                    { error || missingRequiredValue && 
+                    { (error || missingRequiredValue) && 
                         <Alert type='error' message={error || 'Please, fill in all fields of the form'}/>
                     }
                     { emailSuccess &&  
