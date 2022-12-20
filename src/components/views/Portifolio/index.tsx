@@ -66,7 +66,7 @@ const Portifolio = ({ onSelectPortifolio }: MyProps) => {
             <Container>
                 <S.CustomTitle>
                     <Fade top duration={1300}>
-                        <h1>Portifolio</h1>
+                        <h1>Portfolio</h1>
                         <p>These are some projects I participated in!</p>
                     </Fade>
                 </S.CustomTitle>
