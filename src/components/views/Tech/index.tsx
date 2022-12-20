@@ -55,6 +55,8 @@ const Tech = () => {
                         infinite
                         arrows={false}
                         showDots
+                        autoPlay
+                        autoPlaySpeed={2400}
                     >
                         {
                             items.map((item) => (
