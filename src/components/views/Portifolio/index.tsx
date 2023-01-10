@@ -38,9 +38,9 @@ const Portifolio = ({ onSelectPortifolio }: MyProps) => {
             alt: "A landing page with a little owl"
         },
         {
-            title: 'Payroll',
-            text: 'Corporate System',
-            img: '/img/projects/payroll.png',
+            title: 'Construction Run',
+            text: 'Mobile Application',
+            img: '/img/projects/construction.jpg',
             alt: "A table with multiple data"
         },
         {
