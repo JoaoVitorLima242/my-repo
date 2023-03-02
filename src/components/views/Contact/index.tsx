@@ -91,12 +91,6 @@ const Contact =  () => {
                                 <span>LinkedIn</span>
                             </S.SocialMediaButton>
                         </a>
-                        <a href='https://www.upwork.com/freelancers/~018ea73575e64d2ca4' target='_blank' rel="noreferrer">
-                            <S.SocialMediaButton>
-                                <SiUpwork />
-                                <span>UpWork</span>
-                            </S.SocialMediaButton>
-                        </a>
                     </S.SocialMedias>
                 </S.Form> 
             </Fade>
